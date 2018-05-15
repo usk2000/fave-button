@@ -202,8 +202,7 @@ extension Ring {
 extension Ring: CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if let _ = anim.value(forKey: Const.collapseAnimation) {
-            self.removeFromSuperview()
-        }
+        guard anim.value(forKey: Const.collapseAnimation) != nil else { return }
+        self.removeFromSuperview()
     }
 }

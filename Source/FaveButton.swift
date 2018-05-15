@@ -65,7 +65,7 @@ open class FaveButton: UIButton {
     @IBInspectable
     open var circleToColor: UIColor = UIColor(red: 205 / 255, green: 143 / 255, blue: 246 / 255, alpha: 1)
 
-    @IBOutlet open var delegate: AnyObject?
+    @IBOutlet open weak var delegate: AnyObject?
 
     fileprivate(set) var sparkGroupCount: Int = 7
 

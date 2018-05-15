@@ -65,6 +65,7 @@ class Spark: UIView {
 // MARK: create
 extension Spark {
     
+    // swiftlint:disable function_parameter_count
     class func createSpark(_ faveButton: FaveButton, radius: CGFloat, firstColor: UIColor, secondColor: UIColor, angle: Double, dotRadius: DotRadius) -> Spark {
         
         let spark = Init(Spark(radius: radius, firstColor: firstColor, secondColor: secondColor, angle: angle, dotRadius: dotRadius)) {

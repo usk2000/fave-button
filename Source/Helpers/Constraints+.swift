@@ -41,7 +41,7 @@ func attributes(_ attrs: NSLayoutAttribute...) -> [NSLayoutAttribute] {
 // infix operator >>- { associativity left precedence 160 }
 infix operator >>-: DefaultPrecedence
 
-@discardableResult func >>- <T: UIView>(lhs: (T, T), apply: (inout Constraint) -> ()) -> NSLayoutConstraint {
+@discardableResult func >>- <T: UIView>(lhs: (T, T), apply: (inout Constraint) -> Void) -> NSLayoutConstraint {
     var const = Constraint()
     apply(&const)
 
@@ -61,7 +61,7 @@ infix operator >>-: DefaultPrecedence
     return constraint
 }
 
-@discardableResult func >>- <T: UIView>(lhs: T, apply: (inout Constraint) -> ()) -> NSLayoutConstraint {
+@discardableResult func >>- <T: UIView>(lhs: T, apply: (inout Constraint) -> Void) -> NSLayoutConstraint {
     var const = Constraint()
     apply(&const)
 

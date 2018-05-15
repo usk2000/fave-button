@@ -24,7 +24,8 @@
 
 import Foundation
 
-func Init<T>(_ object: T, block: (T) throws -> ()) rethrows -> T {
+// swiftlint:disable identifier_name
+func Init<T>(_ object: T, block: (T) throws -> Void) rethrows -> T {
     try block(object)
     return object
 }

@@ -31,6 +31,8 @@ typealias ElasticEasing = (_ t: CGFloat, _ b: CGFloat, _ c: CGFloat, _ d: CGFloa
 // ELASTIC EASING
 
 struct Elastic {
+    
+    // swiftlint:disable identifier_name
     static var EaseIn: Easing = { (_t, b, c, d) -> CGFloat in
         var t = _t
         
@@ -46,6 +48,7 @@ struct Elastic {
         return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * .pi) / p)) + b
     }
     
+    // swiftlint:disable identifier_name
     static var EaseOut: Easing = { (_t, b, c, d) -> CGFloat in
         var t = _t
         
@@ -60,6 +63,7 @@ struct Elastic {
         return (a * pow(2, -10 * t) * sin((t * d - s) * (2 * .pi) / p) + c + b)
     }
     
+    // swiftlint:disable identifier_name
     static var EaseInOut: Easing = { (_t, b, c, d) -> CGFloat in
         var t = _t
         if t == 0 { return b }
@@ -81,6 +85,8 @@ struct Elastic {
 }
 
 extension Elastic {
+    
+    // swiftlint:disable identifier_name
     static var ExtendedEaseIn: ElasticEasing = { (_t, b, c, d, _a, _p) -> CGFloat in
         var t = _t
         var a = _a
@@ -102,6 +108,7 @@ extension Elastic {
         return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * .pi) / p)) + b
     }
     
+    // swiftlint:disable identifier_name
     static var ExtendedEaseOut: ElasticEasing = { (_t, b, c, d, _a, _p) -> CGFloat in
         var s: CGFloat = 0.0
         var t = _t
@@ -121,6 +128,7 @@ extension Elastic {
         return (a * pow(2, -10 * t) * sin((t * d - s) * (2 * .pi) / p) + c + b)
     }
     
+    // swiftlint:disable identifier_name
     static var ExtendedEaseInOut: ElasticEasing = { (_t, b, c, d, _a, _p) -> CGFloat in
         var s: CGFloat = 0.0
         var t = _t
