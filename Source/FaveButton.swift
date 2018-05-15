@@ -71,9 +71,13 @@ open class FaveButton: UIButton {
 
     fileprivate var faveIconImage: UIImage?
     fileprivate var faveIcon: FaveIcon!
-
+    fileprivate var animationsEnabled = true
+    
     open override var isSelected: Bool {
         didSet {
+            guard self.animationsEnabled else {
+                return
+            }
             animateSelect(self.isSelected, duration: Const.duration)
         }
     }
@@ -96,6 +100,22 @@ open class FaveButton: UIButton {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         applyInit()
+    }
+    
+    public func setSelected(selected: Bool, animated: Bool) {
+        guard selected != self.isSelected else {
+            return
+        }
+        guard animated == false else {
+            self.isSelected = selected
+            return
+        }
+        
+        self.animationsEnabled = false
+        self.isSelected = selected
+        self.animationsEnabled = true
+        
+        animateSelect(self.isSelected, duration: 0.0) // trigger state change without animation
     }
 }
 
@@ -185,6 +205,10 @@ extension FaveButton {
 
         faveIcon.animateSelect(isSelected, fillColor: color, duration: duration, delay: Const.faveIconShowDelay)
 
+        guard duration > 0.0 else {
+            return
+        }
+        
         if isSelected {
             let radius = bounds.size.scaleBy(1.3).width / 2 // ring radius
             let igniteFromRadius = radius * 0.8

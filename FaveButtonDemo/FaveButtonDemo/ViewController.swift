@@ -40,4 +40,10 @@ class ViewController: UIViewController, FaveButtonDelegate {
         }
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loveButton?.setSelected(selected: true, animated: false)
+    }
+    
 }
