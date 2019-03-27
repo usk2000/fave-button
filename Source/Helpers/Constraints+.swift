@@ -27,14 +27,14 @@ import UIKit
 struct Constraint {
     var identifier: String?
 
-    var attribute: NSLayoutAttribute = .centerX
-    var secondAttribute: NSLayoutAttribute = .notAnAttribute
+    var attribute: NSLayoutConstraint.Attribute = .centerX
+    var secondAttribute: NSLayoutConstraint.Attribute = .notAnAttribute
     var constant: CGFloat = 0
     var multiplier: CGFloat = 1
-    var relation: NSLayoutRelation = .equal
+    var relation: NSLayoutConstraint.Relation = .equal
 }
 
-func attributes(_ attrs: NSLayoutAttribute...) -> [NSLayoutAttribute] {
+func attributes(_ attrs: NSLayoutConstraint.Attribute...) -> [NSLayoutConstraint.Attribute] {
     return attrs
 }
 
@@ -78,7 +78,7 @@ infix operator >>-: DefaultPrecedence
     return constraint
 }
 
-func >>- <T: UIView>(lhs: (T, T), attributes: [NSLayoutAttribute]) {
+func >>- <T: UIView>(lhs: (T, T), attributes: [NSLayoutConstraint.Attribute]) {
     for attribute in attributes {
         lhs >>- { (i: inout Constraint) in
             i.attribute = attribute
@@ -86,7 +86,7 @@ func >>- <T: UIView>(lhs: (T, T), attributes: [NSLayoutAttribute]) {
     }
 }
 
-func >>- <T: UIView>(lhs: T, attributes: [NSLayoutAttribute]) {
+func >>- <T: UIView>(lhs: T, attributes: [NSLayoutConstraint.Attribute]) {
     for attribute in attributes {
         lhs >>- { (i: inout Constraint) in
             i.attribute = attribute

@@ -153,7 +153,7 @@ extension Ring {
             $0.toValue = toColor.cgColor
             $0.duration = duration
             $0.beginTime = CACurrentMediaTime() + delay
-            $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            $0.timingFunction = CAMediaTimingFunction(name: .easeOut)
         }
         
         return animation
@@ -164,9 +164,9 @@ extension Ring {
             $0.toValue = strokeColor.cgColor
             $0.duration = duration
             $0.beginTime = CACurrentMediaTime() + delay
-            $0.fillMode = kCAFillModeForwards
+            $0.fillMode = .forwards
             $0.isRemovedOnCompletion = false
-            $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            $0.timingFunction = CAMediaTimingFunction(name: .easeOut)
         }
         return animation
     }
@@ -176,9 +176,9 @@ extension Ring {
             $0.toValue = lineWidth
             $0.duration = duration
             $0.beginTime = CACurrentMediaTime() + delay
-            $0.fillMode = kCAFillModeForwards
+            $0.fillMode = .forwards
             $0.isRemovedOnCompletion = false
-            $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            $0.timingFunction = CAMediaTimingFunction(name: .easeOut)
         }
         return animation
     }
@@ -190,9 +190,9 @@ extension Ring {
             $0.toValue = path.cgPath
             $0.duration = duration
             $0.beginTime = CACurrentMediaTime() + delay
-            $0.fillMode = kCAFillModeForwards
+            $0.fillMode = .forwards
             $0.isRemovedOnCompletion = false
-            $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            $0.timingFunction = CAMediaTimingFunction(name: .easeOut)
         }
         return animation
     }
