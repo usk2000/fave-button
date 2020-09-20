@@ -19,7 +19,6 @@
 		A858CB322516F9F100A10288 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB282516F9F100A10288 /* Spark.swift */; };
 		A858CB332516F9F100A10288 /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB292516F9F100A10288 /* FaveIcon.swift */; };
 		A858CB342516F9F100A10288 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB2A2516F9F100A10288 /* FaveButton.swift */; };
-		A858CB352516F9F100A10288 /* fave_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB2B2516F9F100A10288 /* fave_button.swift */; };
 		A858CB362516F9F100A10288 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB2C2516F9F100A10288 /* Ring.swift */; };
 		A858CB372516F9F100A10288 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB2E2516F9F100A10288 /* Geometry.swift */; };
 		A858CB382516F9F100A10288 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858CB2F2516F9F100A10288 /* Easing.swift */; };
@@ -67,7 +66,6 @@
 		A858CB282516F9F100A10288 /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		A858CB292516F9F100A10288 /* FaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveIcon.swift; sourceTree = "<group>"; };
 		A858CB2A2516F9F100A10288 /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
-		A858CB2B2516F9F100A10288 /* fave_button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fave_button.swift; sourceTree = "<group>"; };
 		A858CB2C2516F9F100A10288 /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		A858CB2E2516F9F100A10288 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		A858CB2F2516F9F100A10288 /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				A858CB282516F9F100A10288 /* Spark.swift */,
 				A858CB292516F9F100A10288 /* FaveIcon.swift */,
 				A858CB2A2516F9F100A10288 /* FaveButton.swift */,
-				A858CB2B2516F9F100A10288 /* fave_button.swift */,
 				A858CB2C2516F9F100A10288 /* Ring.swift */,
 				A858CB2D2516F9F100A10288 /* Helpers */,
 			);
@@ -311,7 +308,6 @@
 				A858CB332516F9F100A10288 /* FaveIcon.swift in Sources */,
 				A858CB372516F9F100A10288 /* Geometry.swift in Sources */,
 				A858CB3A2516F9F100A10288 /* Constraints+.swift in Sources */,
-				A858CB352516F9F100A10288 /* fave_button.swift in Sources */,
 				A858CB362516F9F100A10288 /* Ring.swift in Sources */,
 				A858CB342516F9F100A10288 /* FaveButton.swift in Sources */,
 				A858CB322516F9F100A10288 /* Spark.swift in Sources */,
